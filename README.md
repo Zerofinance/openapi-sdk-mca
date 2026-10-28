@@ -22,17 +22,3 @@ MCA OpenAPI SDK for Zerofinance.
 ```bash
 mvn clean verify
 ```
-
-## Publishing
-
-Configure a Maven server with id `mavencenter-release` in `~/.m2/settings.xml` using a
-Central Portal user token. The token and the GPG passphrase must not be committed.
-
-For a final release:
-
-```bash
-mvn clean deploy -Prelease
-```
-
-The release profile requires a GPG private key whose public key is available from a
-Central-supported keyserver. Maven Central releases are immutable.
