@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1.tools;
+package com.zerofinance.mca.openapi.sdk.v1.tools;
 
 import cn.hutool.core.codec.Base64;
 
@@ -35,7 +35,7 @@ import java.util.Map;
  * <p>
  * <a href="RSAUtils.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0

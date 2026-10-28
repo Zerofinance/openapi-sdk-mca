@@ -16,10 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1;
+package com.zerofinance.mca.openapi.sdk.v1;
 
-import com.zerofinance.xpay.openapi.sdk.v1.entity.RSAKey;
-import com.zerofinance.xpay.openapi.sdk.v1.tools.SdkTools;
+import com.zerofinance.mca.openapi.sdk.v1.dto.ResponseQuery;
+import com.zerofinance.mca.openapi.sdk.v1.entity.RSAKey;
+import com.zerofinance.mca.openapi.sdk.v1.tools.SdkTools;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -30,47 +31,52 @@ import org.junit.runners.MethodSorters;
  * A Testcase for SdkTools.
  *
  * <p>
- * <a href="SdkToolsContextTest.java"><i>View Source</i></a>
+ * <a href="SdkToolsResponseTest.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SdkToolsContextTest {
+public class SdkToolsResponseTest {
 
     private static RSAKey rsaKey;
 
-    private static String sign;
+    private static String aesKey;
+
+    private static ResponseQuery query;
 
     @BeforeClass
     public static void setUp() {
         rsaKey = SdkTools.genRSAKey();
+        aesKey = "121212312312312312312312";
     }
 
     @Test
-    public void t1Callback() {
+    public void t1SignResponse() {
         String privateKey = rsaKey.getPrivateKey();
-        System.out.println("privateKey--->"+privateKey);
-        String url = "https://xxxxxx/callback?outlet=123&status=1";
-        this.sign = SdkTools.signUrl(url, privateKey);
-        System.out.println("sign--->"+sign);
-        // Mock: Puts the sign to the request header, and pass to the outlet's server-side.
-        Assert.assertNotNull(sign);
+        String data = "{a:1,b:2,c:3}";
+        query = ResponseQuery.buildSuccess(data);
+        SdkTools.signResponse(query, privateKey, aesKey);
+        System.out.println("query--->"+query);
+        Assert.assertNotNull(query);
     }
 
 
 
     @Test
-    public void t2VerifyUrl() {
+    public void t2VerifyResponse() {
         String publicKey = rsaKey.getPublicKey();
-        String url = "https://xxxxxx/callback?outlet=123&status=1";
-        System.out.println("publicKey--->"+publicKey);
-        // Mock: in the normal senior, a certain outlet may get the sign from request header.
-        // String sign = request.getHeader("sign");
-        boolean verified = SdkTools.verifyUrl(url, sign, publicKey);
+        boolean verified = SdkTools.verifyResponse(query, publicKey);
         System.out.println("verified--->"+verified);
         Assert.assertTrue(verified);
+    }
+
+    @Test
+    public void t3GetResponseQuery() {
+        ResponseQuery query1 = SdkTools.getResponseQuery(query, aesKey);
+        System.out.println("query--->"+query1);
+        Assert.assertNotNull(query);
     }
 }

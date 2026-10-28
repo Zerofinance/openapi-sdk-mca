@@ -1,4 +1,4 @@
-package com.zerofinance.xpay.openapi.sdk.v1.tools;
+package com.zerofinance.mca.openapi.sdk.v1.tools;
 
 import cn.hutool.core.codec.Base64;
 
@@ -12,7 +12,7 @@ import javax.crypto.spec.SecretKeySpec;
  * <p>
  * <a href="AesEncryptUtils.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/14/2022 3:44 PM
  */
 class AESEncryptUtils {

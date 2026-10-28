@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1.tools;
+package com.zerofinance.mca.openapi.sdk.v1.tools;
 
 import cn.hutool.core.lang.Assert;
 import cn.hutool.core.lang.Validator;
@@ -31,9 +31,9 @@ import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.Method;
 import cn.hutool.json.JSONUtil;
-import com.zerofinance.xpay.openapi.sdk.v1.constant.ErrorCodeEnum;
-import com.zerofinance.xpay.openapi.sdk.v1.dto.*;
-import com.zerofinance.xpay.openapi.sdk.v1.entity.RSAKey;
+import com.zerofinance.mca.openapi.sdk.v1.constant.ErrorCodeEnum;
+import com.zerofinance.mca.openapi.sdk.v1.dto.*;
+import com.zerofinance.mca.openapi.sdk.v1.entity.RSAKey;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -46,7 +46,7 @@ import java.util.Optional;
  * <p>
  * <a href="SdkTools.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0

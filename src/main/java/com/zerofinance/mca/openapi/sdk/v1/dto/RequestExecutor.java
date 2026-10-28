@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1.dto;
+package com.zerofinance.mca.openapi.sdk.v1.dto;
 
 import cn.hutool.http.HttpGlobalConfig;
 import lombok.Builder;
@@ -24,15 +24,13 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.ToString;
 
-import java.io.File;
-
 /**
  * A Executor Of Request.
  *
  * <p>
  * <a href="RequestExecutor.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0
@@ -40,7 +38,7 @@ import java.io.File;
 @Builder
 @Getter
 @ToString
-public class UploadExecutor {
+public class RequestExecutor {
 
     @NonNull
     private String requestUrl;
@@ -55,7 +53,5 @@ public class UploadExecutor {
     @NonNull
     private String aesKey;
 
-    @NonNull
-    private File file;
-
+    private String body;
 }

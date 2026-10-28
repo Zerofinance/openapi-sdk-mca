@@ -16,12 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1;
+package com.zerofinance.mca.openapi.sdk.v1;
 
 import cn.hutool.core.net.url.UrlQuery;
-import com.zerofinance.xpay.openapi.sdk.v1.dto.RequestQuery;
-import com.zerofinance.xpay.openapi.sdk.v1.entity.RSAKey;
-import com.zerofinance.xpay.openapi.sdk.v1.tools.SdkTools;
+import com.zerofinance.mca.openapi.sdk.v1.dto.RequestQuery;
+import com.zerofinance.mca.openapi.sdk.v1.entity.RSAKey;
+import com.zerofinance.mca.openapi.sdk.v1.tools.SdkTools;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -37,7 +37,7 @@ import java.nio.charset.StandardCharsets;
  * <p>
  * <a href="SdkToolsRequestTest.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0

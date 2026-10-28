@@ -4,7 +4,7 @@
 
     <groupId>com.zerofinance</groupId>
     <artifactId>openapi-sdk-mca</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>openapi-sdk-mca</name>
@@ -21,14 +21,9 @@
 
     <developers>
         <developer>
-            <id>xpc</id>
-            <name>xpc</name>
-            <email>ts@zero-xpay.com</email>
-            <roles>
-                <role>Project Manager</role>
-                <role>Architect</role>
-            </roles>
-            <timezone>+8</timezone>
+            <id>rain.he</id>
+            <name>rain.he</name>
+            <email>rain.he@zerofinance.com</email>
         </developer>
     </developers>
 

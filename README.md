@@ -13,7 +13,7 @@ MCA OpenAPI SDK for Zerofinance.
 <dependency>
     <groupId>com.zerofinance</groupId>
     <artifactId>openapi-sdk-mca</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 

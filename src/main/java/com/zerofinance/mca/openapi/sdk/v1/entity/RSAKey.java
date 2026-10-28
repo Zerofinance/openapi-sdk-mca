@@ -16,42 +16,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1.dto;
+package com.zerofinance.mca.openapi.sdk.v1.entity;
 
-import cn.hutool.http.HttpGlobalConfig;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
-import lombok.ToString;
 
 /**
- * A Executor Of Request.
+ * A pair of key for RSA2.
  *
  * <p>
- * <a href="RequestExecutor.java"><i>View Source</i></a>
+ * <a href="RSAKey.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0
  */
-@Builder
 @Getter
-@ToString
-public class RequestExecutor {
+@Builder
+public class RSAKey {
 
+    /**
+     * The private key.
+     */
     @NonNull
-    private String requestUrl;
+    private String privateKey;
 
-    private int connectionTimeout = HttpGlobalConfig.getTimeout();
-
-    private int readTimeout = HttpGlobalConfig.getTimeout();
-
+    /**
+     * The public key.
+     */
     @NonNull
     private String publicKey;
-
-    @NonNull
-    private String aesKey;
-
-    private String body;
 }

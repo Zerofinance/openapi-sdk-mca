@@ -1,4 +1,4 @@
-package com.zerofinance.xpay.openapi.sdk.v1.tools;
+package com.zerofinance.mca.openapi.sdk.v1.tools;
 
 
 import org.junit.*;

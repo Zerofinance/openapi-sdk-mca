@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.zerofinance.xpay.openapi.sdk.v1.dto;
+package com.zerofinance.mca.openapi.sdk.v1.dto;
 
 import cn.hutool.http.HttpGlobalConfig;
 import lombok.Builder;
@@ -30,7 +30,7 @@ import lombok.ToString;
  * <p>
  * <a href="CallBackExecutor.java"><i>View Source</i></a>
  *
- * @author Dave.zhao
+ * @author rain.he
  * Date: 12/27/2022 10:40 AM
  * @version 1.0
  * @since 1.0
